@@ -14,8 +14,10 @@ module.exports = {
             var lang = this.isLanguageBook()? this.language : '';
             if (lang) lang = lang + '/';
 
+            var pathPrefix = this.config.get('pluginsConfig.sitemap.pathPrefix', '');
+
             urls.push({
-                url: this.output.toURL(lang + page.path)
+                url: this.output.toURL(pathPrefix + lang + page.path)
             });
 
             return page;

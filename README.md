@@ -9,7 +9,8 @@ Add it to your `book.json` with a basic configuration:
     "plugins": ["sitemap"],
     "pluginsConfig": {
         "sitemap": {
-            "hostname": "http://mybook.com/"
+            "hostname": "http://mybook.com",
+            "pathPrefix": "/mybook/"
         }
     }
 }
