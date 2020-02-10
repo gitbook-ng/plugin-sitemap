@@ -17,7 +17,7 @@ module.exports = {
             var pathPrefix = this.config.get('pluginsConfig.sitemap.pathPrefix', '');
 
             var url = this.output.toURL(pathPrefix + lang + page.path);
-            if (url.startsWith('./')) url = '';  # To avoid https://example.com/./ in sitemap
+            if (url.startsWith('./')) url = '';  // To avoid https://example.com/./ in sitemap
 
             urls.push({ url });
 
