@@ -16,9 +16,10 @@ module.exports = {
 
             var pathPrefix = this.config.get('pluginsConfig.sitemap.pathPrefix', '');
 
-            urls.push({
-                url: this.output.toURL(pathPrefix + lang + page.path)
-            });
+            var url = this.output.toURL(pathPrefix + lang + page.path);
+            if (url.startsWith('./')) url = '';  # To avoid https://example.com/./ in sitemap
+
+            urls.push({ url });
 
             return page;
         },
