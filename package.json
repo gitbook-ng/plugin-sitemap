@@ -28,7 +28,7 @@
             },
             "pathPrefix": {
                 "type": "string",
-                "required": true,
+                "required": false,
                 "title": "Path prefix for sitemap link"
             }
         }
